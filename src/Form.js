@@ -4,7 +4,8 @@ import React, {Component} from "react";
 class Form extends Component { 
     initialState = {
         name: " ",
-        job: " ",
+        currentjob: " ",
+        prevjob:" ",
     };
 
     state = this.initialState
@@ -23,25 +24,32 @@ onFormSubmit = (event) => {
     this.setState(this.initialState);
 }
 render (){
-    const {name, job} = this.state;
+    const {name, currentjob, prevjob} = this.state;
 
     return (
         <form onSubmit={this.onFormSubmit}>
             <label for='name'>Name</label>
             <input 
                 type="text"
-
                 name="name"
                 id="name"
                 value={name}
                 onChange={this.handleChange}/>
-            <label for ="job">Job</label>
+            <label for ="currentjob"> Current Job</label>
             <input 
                 type="text"
-                name="job"
-                id="job"
-                value={job}
+                name="currentjob"
+                id="currentjob"
+                value={currentjob}
                 onChange={this.handleChange}/>
+             <label for ="prevjob">Previous Job</label>
+             <input 
+                type="text"
+                name="prevjob"
+                id="prevjob"
+                value={prevjob}
+                onChange={this.handleChange}/>
+                 
             <button type="submit"> Submit </button>
                 
           
