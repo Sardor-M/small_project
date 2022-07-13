@@ -4,7 +4,8 @@ const TableHeader = () => {
         <thead>
             <tr>
                 <th>Name</th>
-                <th>Job</th>
+                <th>Current Job</th>
+                <th>Previous Job</th>
                 <th>Remove</th>
             </tr>
         </thead>
@@ -15,10 +16,11 @@ const TableHeader = () => {
       return (
         <tr key={index}>
           <td>{row.name}</td>
-          <td>{row.job}</td>
+          <td>{row.currentjob}</td>
+          <td>{row.prevjob}</td>
           <td>
             <button onClick={() => props.removeCharacter(index)}>
-              Delete it
+              Remove 
             </button>
           </td>
         </tr>
